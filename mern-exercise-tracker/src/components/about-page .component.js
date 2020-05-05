@@ -15,11 +15,13 @@ export default class AboutClass extends Component {
 
           </p>
 
-          <h3>third party software used to carry this out</h3>
+          <h3>Third party software used to carry this out</h3>
           <p>The code was created in Visual Studio Code-https://code.visualstudio.com/</p>
-          <p>Database created on MongoDB</p>
-          <p>The code was created in Visual Studio Code</p>
-          <p>The code was created in Visual Studio Code</p>
+          <p>Database created on MongoDB- https://cloud.mongodb.com/</p>
+          <p>Node js was installed - https://nodejs.org/en/</p>
+          <p>Insomnia rest tool to help get a better understanding og the databse - https://insomnia.rest/</p>
+          <p>The Project was turned into a react project. Already bulit in</p>
+          <p>Axios and DatePicker also install in system</p>
           </div>
         )}
 }
