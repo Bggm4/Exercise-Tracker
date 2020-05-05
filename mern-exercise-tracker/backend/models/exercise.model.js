@@ -1,3 +1,5 @@
+//standard backend to set up Mongodb for exercise.
+
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;

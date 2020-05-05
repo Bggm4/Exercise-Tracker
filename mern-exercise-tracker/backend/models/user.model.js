@@ -1,3 +1,4 @@
+//standard backend to set up Mongodb for user.
 const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
