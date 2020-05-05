@@ -1,7 +1,6 @@
 {
   "name": "exercise-tracker",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "axios": "^0.19.2",
@@ -15,5 +14,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bggm4/Exercise-Tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Bggm4/Exercise-Tracker/issues"
+  },
+  "homepage": "https://github.com/Bggm4/Exercise-Tracker#readme",
+  "description": ""
 }

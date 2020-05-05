@@ -1,3 +1,4 @@
+//exercises list to be shown for display
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -24,7 +25,7 @@ export default class ExercisesList extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5001/exercises/')
+    axios.get('http://localhost:5002/exercises/')
       .then(response => {
         this.setState({ exercises: response.data })
       })
@@ -34,7 +35,7 @@ export default class ExercisesList extends Component {
   }
 
   deleteExercise(id) {
-    axios.delete('http://localhost:5001/exercises/'+id)
+    axios.delete('http://localhost:5002/exercises/'+id)
       .then(response => { console.log(response.data)});
 
     this.setState({

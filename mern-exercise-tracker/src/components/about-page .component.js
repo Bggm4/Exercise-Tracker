@@ -1,3 +1,4 @@
+//About page component to the navbar
 import React, { Component } from 'react';
 
 import "react-datepicker/dist/react-datepicker.css";

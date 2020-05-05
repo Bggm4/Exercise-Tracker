@@ -1,3 +1,4 @@
+//App.js for the different links within the website and components to the navbar
 import React from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Route} from "react-router-dom";

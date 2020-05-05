@@ -1,3 +1,4 @@
+//Creating user component to the navbar. Very similar to all the others
 import React, { Component } from 'react';
 import axios from 'axios';
 
@@ -28,7 +29,7 @@ export default class CreateUser extends Component {
 
     console.log(user);
 
-    axios.post('http://localhost:5001/users/add', user)
+    axios.post('http://localhost:5002/users/add', user)
       .then(res => console.log(res.data));
 
     this.setState({

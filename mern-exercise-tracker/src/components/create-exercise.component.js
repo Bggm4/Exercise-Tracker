@@ -1,3 +1,4 @@
+//Create exxercise compnent
 import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
@@ -7,6 +8,7 @@ export default class CreateExercise extends Component {
   constructor(props) {
     super(props);
 
+    //getting/ defining the vairables needed
     this.onChangeUsername = this.onChangeUsername.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeDuration = this.onChangeDuration.bind(this);
@@ -14,6 +16,7 @@ export default class CreateExercise extends Component {
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
+      //standar empty state 
       username: '',
       description: '',
       duration: 0,
@@ -22,8 +25,9 @@ export default class CreateExercise extends Component {
     }
   }
 
+  //mounting component sucessful?
   componentDidMount() {
-    axios.get('http://localhost:5001/users/')
+    axios.get('http://localhost:5002/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -32,40 +36,47 @@ export default class CreateExercise extends Component {
           })
         }
       })
+      //if not catch the error 
       .catch((error) => {
         console.log(error);
       })
 
   }
 
+  //change username
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
     })
   }
 
+  //change description
   onChangeDescription(e) {
     this.setState({
       description: e.target.value
     })
   }
 
+  //change duration
   onChangeDuration(e) {
     this.setState({
       duration: e.target.value
     })
   }
 
+  //change date
   onChangeDate(date) {
     this.setState({
       date: date
     })
   }
 
+  //request upon hitting submit 
   onSubmit(e) {
     e.preventDefault();
 
     const exercise = {
+      //getting new info
       username: this.state.username,
       description: this.state.description,
       duration: this.state.duration,
@@ -74,12 +85,14 @@ export default class CreateExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5001/exercises/add', exercise)
+    axios.post('http://localhost:5002/exercises/add', exercise)
       .then(res => console.log(res.data));
 
     window.location = '/';
   }
 
+
+  //Long winded way to rendor it to the screen 
   render() {
     return (
     <div>

@@ -1,3 +1,5 @@
+//Edit user part of the navbar, very similar to the other components
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import DatePicker from 'react-datepicker';
@@ -23,7 +25,7 @@ export default class EditExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://localhost:5001/exercises/'+this.props.match.params.id)
+    axios.get('http://localhost:5002/exercises/'+this.props.match.params.id)
       .then(response => {
         this.setState({
           username: response.data.username,
@@ -36,7 +38,7 @@ export default class EditExercise extends Component {
         console.log(error);
       })
 
-    axios.get('http://localhost:5001/users/')
+    axios.get('http://localhost:5002/users/')
       .then(response => {
         if (response.data.length > 0) {
           this.setState({
@@ -86,7 +88,7 @@ export default class EditExercise extends Component {
 
     console.log(exercise);
 
-    axios.post('http://localhost:5001/exercises/update/' + this.props.match.params.id, exercise)
+    axios.post('http://localhost:5002/exercises/update/' + this.props.match.params.id, exercise)
       .then(res => console.log(res.data));
 
     window.location = '/';
