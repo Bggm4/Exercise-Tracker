@@ -23,6 +23,7 @@ export default class AboutClass extends Component {
           <p>Insomnia rest tool to help get a better understanding og the databse - https://insomnia.rest/</p>
           <p>The Project was turned into a react project. Already bulit in</p>
           <p>Axios and DatePicker also install in system</p>
+          <p>Bootstrap was also imported</p>
           </div>
         )}
 }
